@@ -6,8 +6,8 @@ import {
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { HomePage } from './pages/Home';
-import { TeamsPage } from './pages/Teams';
-import { PlayersPage } from './pages/Players';
+import { RQPlayers } from './pages/RQPlayers';
+import { TradtionalPlayers } from './pages/TradtionalPlayers';
 import { Navbar } from "./components/Navbar";
 import './App.css';
 
@@ -22,8 +22,8 @@ function App() {
           <Routes>
             <>
             <Route path="/" element={<HomePage />} />
-            <Route path="/players" element={<PlayersPage />} />
-            <Route path="/teams" element={<TeamsPage />} />
+            <Route path="/traditional-players" element={<TradtionalPlayers />} />
+            <Route path="/rq-players" element={<RQPlayers />} />
             </>
           </Routes>
         </BrowserRouter>

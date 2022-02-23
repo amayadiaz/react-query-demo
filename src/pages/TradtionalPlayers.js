@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
-export const PlayersPage = () => {
+export const TradtionalPlayers = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
@@ -27,7 +27,7 @@ export const PlayersPage = () => {
 
   return (
     <>
-      <h3>NBA Players Page</h3>
+      <h3>NBA Traditional Players</h3>
       {
         data.map((element) => (
           <div style={{ display: "inline-block" }} key={element.id}>

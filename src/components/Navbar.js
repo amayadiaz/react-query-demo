@@ -9,10 +9,10 @@ export const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/teams">Teams</Link>
+          <Link to="/traditional-players">Tradional Players</Link>
         </li>
         <li>
-          <Link to="/players">Players</Link>
+          <Link to="/rq-players">RQ Players</Link>
         </li>
       </ul>
     </nav>
