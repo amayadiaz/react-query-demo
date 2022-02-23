@@ -4,14 +4,16 @@ import axios from 'axios';
 
 export const TeamsPage = () => {
   
-  const { isLoading, data } = useQuery('teams', () => {
-    return axios.get('http://localhost:4000/teams')
+  const { isLoading, data, isError, error } = useQuery('teams', () => {
+    return axios.get('http://localhost:4000/teams1')
   })
-
-  console.log(data);
 
   if (isLoading) {
     return <h2>Loading ...</h2>
+  }
+
+  if (isError) {
+    return <h2>{error.message}</h2>
   }
 
   return (
