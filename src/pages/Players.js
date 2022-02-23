@@ -22,7 +22,7 @@ export const PlayersPage = () => {
       <h3>NBA Players Page</h3>
       {
         data.map((element) => (
-          <div style={{ display: "inline-block" }}>
+          <div style={{ display: "inline-block" }} key={element.id}>
             <img src={element.image} alt={element.name} width="270" height="200" />
             <h3>{element.name}</h3>
             <p>{element.team}</p>

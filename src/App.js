@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import { QueryClientProvider, QueryClient } from "react-query";
 import { HomePage } from './pages/Home';
 import { TeamsPage } from './pages/Teams';
 import { PlayersPage } from './pages/Players';
@@ -11,8 +12,10 @@ import './App.css';
 
 
 function App() {
+  const queryClient = new QueryClient()
   return (
     <>
+    <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -23,6 +26,7 @@ function App() {
           </>
         </Routes>
       </BrowserRouter>
+      </QueryClientProvider>
     </>
   );
 }

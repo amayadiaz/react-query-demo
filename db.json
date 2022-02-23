@@ -18,5 +18,22 @@
       "team": "Charlotte Hornets",
       "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630163.png"
     }
+  ], 
+  "teams": [
+    {
+      "id": "1610612738",
+      "name": "Boston Celtics",
+      "image": "https://cdn.nba.com/logos/nba/1610612738/global/L/logo.svg"
+    },
+    {
+      "id": "1610612741",
+      "name": "Chicago Bulls",
+      "image": "https://cdn.nba.com/logos/nba/1610612741/global/L/logo.svg"
+    },
+    {
+      "id": "1610612737",
+      "name": "Atlanta Hawks",
+      "image": "https://cdn.nba.com/logos/nba/1610612737/global/L/logo.svg"
+    }
   ]
 }
