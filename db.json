@@ -1,0 +1,22 @@
+{
+  "players": [
+    {
+      "id": "1628389",
+      "name": "Bam Adebayo",
+      "team": "Miami Heat",
+      "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1628389.png"
+    },
+    {
+      "id": "201939",
+      "name": "Stephen Curry",
+      "team": "Golden State Warriors",
+      "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/201939.png"
+    },
+    {
+      "id": "1630163",
+      "name": "Lamelo Ball",
+      "team": "Charlotte Hornets",
+      "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1630163.png"
+    }
+  ]
+}
