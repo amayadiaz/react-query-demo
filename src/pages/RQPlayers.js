@@ -6,6 +6,12 @@ export const RQPlayers = () => {
   
   const { isLoading, data, isError, error, isFetching } = useQuery('teams', () => {
     return axios.get('http://localhost:4000/players')
+  }, {
+    // Default Values
+    cacheTime: 5 * 60 * 1000,
+    staleTime: 0,
+    refetchOnMount: true,
+    refetchOnWindowFocus: true,
   })
 
   console.log({ isLoading, isFetching });
