@@ -12,6 +12,8 @@ export const RQPlayers = () => {
     staleTime: 0,
     refetchOnMount: true,
     refetchOnWindowFocus: true,
+    // refetchInterval: 3000,
+    // refetchIntervalInBackground: true,
   })
 
   console.log({ isLoading, isFetching });
