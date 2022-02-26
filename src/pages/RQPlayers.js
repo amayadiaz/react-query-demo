@@ -7,7 +7,12 @@ export const RQPlayers = () => {
   const { isLoading, data, isError, error, isFetching, refetch } = useQuery('teams', () => {
     return axios.get('http://localhost:4000/players')
   }, {
-    enabled: false,
+    onSuccess: (data) => {
+      console.log('Perform side effect after success ', data);
+    },
+    onError: (error) => {
+      console.log('Perform side effect after error ', error);
+    }
   })
 
   console.log({ isLoading, isFetching });
