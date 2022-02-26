@@ -4,16 +4,10 @@ import axios from 'axios';
 
 export const RQPlayers = () => {
   
-  const { isLoading, data, isError, error, isFetching } = useQuery('teams', () => {
+  const { isLoading, data, isError, error, isFetching, refetch } = useQuery('teams', () => {
     return axios.get('http://localhost:4000/players')
   }, {
-    // Default Values
-    cacheTime: 5 * 60 * 1000,
-    staleTime: 0,
-    refetchOnMount: true,
-    refetchOnWindowFocus: true,
-    // refetchInterval: 3000,
-    // refetchIntervalInBackground: true,
+    enabled: false,
   })
 
   console.log({ isLoading, isFetching });
@@ -29,14 +23,17 @@ export const RQPlayers = () => {
   return (
     <>
       <h3>NBA RQ Players</h3>
+      <button onClick={refetch}>Fetch Players</button>
       {
-        data?.data.map((element) => (
+        <div>
+        {data?.data.map((element) => (
           <div style={{ display: "inline-block" }} key={element.id}>
             <img src={element.image} alt={element.name} width="270" height="200" />
             <h3>{element.name}</h3>
             <p>{element.team}</p>
           </div>
-        ))
+        ))}
+        </div>
       }
     </>
   )
