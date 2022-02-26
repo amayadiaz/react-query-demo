@@ -12,6 +12,10 @@ export const RQPlayers = () => {
     },
     onError: (error) => {
       console.log('Perform side effect after error ', error);
+    },
+    select: (data) => {
+      // Data Transformation
+      return data.data.map(player => player);
     }
   })
 
@@ -31,7 +35,7 @@ export const RQPlayers = () => {
       <button onClick={refetch}>Fetch Players</button>
       {
         <div>
-        {data?.data.map((element) => (
+        {data.map((element) => (
           <div style={{ display: "inline-block" }} key={element.id}>
             <img src={element.image} alt={element.name} width="270" height="200" />
             <h3>{element.name}</h3>
