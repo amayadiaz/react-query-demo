@@ -1,23 +1,11 @@
 import React from "react";
 import { useQuery } from "react-query";
 import axios from 'axios';
+import { usePlayersData } from '../hooks/usePlayersData';
 
 export const RQPlayers = () => {
   
-  const { isLoading, data, isError, error, isFetching, refetch } = useQuery('teams', () => {
-    return axios.get('http://localhost:4000/players')
-  }, {
-    onSuccess: (data) => {
-      console.log('Perform side effect after success ', data);
-    },
-    onError: (error) => {
-      console.log('Perform side effect after error ', error);
-    },
-    select: (data) => {
-      // Data Transformation
-      return data.data.map(player => player);
-    }
-  })
+  const { isLoading, data, isError, error, isFetching, refetch } = usePlayersData()
 
   console.log({ isLoading, isFetching });
 
