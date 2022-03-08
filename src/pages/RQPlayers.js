@@ -1,6 +1,5 @@
 import React from "react";
-import { useQuery } from "react-query";
-import axios from 'axios';
+import { Link } from "react-router-dom";
 import { usePlayersData } from '../hooks/usePlayersData';
 
 export const RQPlayers = () => {
@@ -24,10 +23,11 @@ export const RQPlayers = () => {
       {
         <div>
         {data.map((element) => (
-          <div style={{ display: "inline-block" }} key={element.id}>
+          <div style={{ display: "inline-block", textDecoration: 'none' }} key={element.id}>
+            <Link to={`/rq-players/${element.id}`}>
             <img src={element.image} alt={element.name} width="270" height="200" />
             <h3>{element.name}</h3>
-            <p>{element.team}</p>
+            </Link>
           </div>
         ))}
         </div>

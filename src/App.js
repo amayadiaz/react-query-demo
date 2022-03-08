@@ -10,6 +10,7 @@ import { RQPlayers } from './pages/RQPlayers';
 import { TradtionalPlayers } from './pages/TradtionalPlayers';
 import { Navbar } from "./components/Navbar";
 import './App.css';
+import { RQPlayerDetails } from "./pages/RQPlayerDetails";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Navbar />
           <Routes>
             <>
+            <Route path="/rq-players/:playerId" element={<RQPlayerDetails />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/traditional-players" element={<TradtionalPlayers />} />
             <Route path="/rq-players" element={<RQPlayers />} />
