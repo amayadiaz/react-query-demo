@@ -11,6 +11,7 @@ import { TradtionalPlayers } from './pages/TradtionalPlayers';
 import { Navbar } from "./components/Navbar";
 import './App.css';
 import { RQPlayerDetails } from "./pages/RQPlayerDetails";
+import { ParallelQueries } from "./pages/ParallelQueries";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Navbar />
           <Routes>
             <>
+            <Route path="/rq-parallel" element={<ParallelQueries />} />
             <Route path="/rq-players/:playerId" element={<RQPlayerDetails />} />
             <Route path="/" element={<HomePage />} />
             <Route path="/traditional-players" element={<TradtionalPlayers />} />
