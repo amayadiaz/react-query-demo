@@ -13,6 +13,7 @@ import './App.css';
 import { RQPlayerDetails } from "./pages/RQPlayerDetails";
 import { ParallelQueries } from "./pages/ParallelQueries";
 import { DynamicParallelQueries } from "./pages/DynamicParallelQueries";
+import { DependentQueries } from "./pages/DependentQueries";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Navbar />
           <Routes>
             <>
+            <Route path="/rq-dependent" element={<DependentQueries playerId="1628389" />} />
             <Route path="/rq-dynamic-parallel" element={<DynamicParallelQueries playersId={['1628389', '201939']} />} />
             <Route path="/rq-parallel" element={<ParallelQueries />} />
             <Route path="/rq-players/:playerId" element={<RQPlayerDetails />} />
